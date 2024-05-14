@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="flex-1">
         <Link href={"/"} className="btn btn-ghost text-xl">
-          Marketing QA
+          Marketing API
         </Link>
       </div>
       <div className="flex-none">
@@ -13,7 +13,7 @@ const Navbar = () => {
           <li>
             <details>
               <summary>Services</summary>
-              <ul className="p-2 bg-base-100 rounded-t-none">
+              <ul className="rounded-t-none bg-base-100 p-2">
                 <li>
                   <Link href={"/adbuild"}>Ad Build QA</Link>
                 </li>
