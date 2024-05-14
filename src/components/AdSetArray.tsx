@@ -16,19 +16,26 @@ const AdSetArray: React.FC<AdSetArrayProps> = ({
     name: `campaigns.${campaignIndex}.adSets`,
   });
   return (
-    <div style={{ marginLeft: 20 }}>
+    <div className="ml-5">
       {fields.map((item, k) => (
-        <div key={item.id}>
+        <div key={item.id} className="flex items-center gap-2">
           <input
+            type="number"
             {...register(`campaigns.${campaignIndex}.adSets.${k}`)}
-            className="input input-sm input-bordered"
+            className="input input-sm input-bordered my-1 [appearance:textfield] focus-within:input-primary [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
           />
-          <button className="btn btn-error btn-sm" onClick={() => remove(k)}>
+          <button
+            className="btn btn-error btn-sm opacity-50"
+            onClick={() => remove(k)}
+          >
             X
           </button>
         </div>
       ))}
-      <button className="btn btn-sm" onClick={() => append(-1)}>
+      <button
+        className="btn btn-sm text-xs outline outline-white"
+        onClick={() => append(-1)}
+      >
         Add AdSet
       </button>
     </div>
